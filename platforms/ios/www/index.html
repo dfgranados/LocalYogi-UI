@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	 <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
+	<link href="assets/css/styles.css" rel="stylesheet">
+	<link href="assets/css/pageslider.css" rel="stylesheet">
+	<script src="lib/handlebars.js"></script>
+</head>
+<body>
+	
+	<script id="employee-list-tpl" type="text/template">
+	    <ul class="table-view">
+	    	<a href="#home-tpl">Login</a>
+	    	<a href="#register-tpl">Register</a>
+	        {{#each this}}
+	        <li class="table-view-cell media">
+	          <a href="#employees/{{ id }}">
+	              <img class="media-object pull-left" src="assets/pics/{{pic}}">
+	              <div class="media-body">
+	                  {{firstName}} {{lastName}}
+	                  <p>{{title}}</p>
+	              </div>
+	          </a>
+	        </li>
+	        {{/each}}
+	    </ul>
+	</script>
+
+	  <!-- LOGIN VIEWS -->
+	  <script id="login-tpl" type="text/template">
+	    <header class="bar bar-nav">
+	        <h1 class="title">LocalYogi Login</h1>
+	    </header>
+	    <div class="bar bar-standard bar-header-secondary">
+	        <input class='search-key' type="search"/>
+	    </div>
+	    <div class="content"></div>
+	</script>
+
+	  <script id="register-tpl" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Reg</h1>
+	      </header>
+	      <div class="content">
+	      This is the feed
+	          
+	      </div>
+	  </script>
+
+	  <!-- NAV BAR VIEWS -->
+
+	   <script id="home-tpl" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Home Page</h1>
+	      </header>
+	      <div class="content">
+	      <a href="#home-tpl">Home</a>
+	      <a href="#myclasses-view">My Classes</a>
+	      <a href="#search-view">Search</a>
+	      <a href="#filter-view">Filter</a>
+	      
+
+
+	      <a href="#classes-tpl">Classes</a>
+	      <a href="#map-tpl">Map</a>
+	      <a href="#host-tpl">Host</a>
+	      <a href="#settings-tpl">Settings</a>
+	      <a href="#invite-tpl">Invite</a>
+	      </div>
+	  </script>
+
+	    <script id="myclasses-view" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#home-tpl">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">My Classes</h1>
+	      </header>
+	      <div class="content">
+	      This is the feed
+	      </div>
+	  </script>
+
+	    <script id="search-view" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#home-tpl">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Search</h1>
+	      </header>
+	      <div class="content">
+	      This is the feed
+	      </div>
+	  </script>
+
+	    <script id="filter-view" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#home-tpl">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Filter</h1>
+	      </header>
+	      <div class="content">
+	      This is the feed
+	      </div>
+	  </script>
+
+	 <!-- MAIN MENU VIEWS -->
+
+	  <script id="classes-tpl" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#home-tpl">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Classes</h1>
+	      </header>
+	      <div class="content">
+	      This is the feed
+	      </div>
+	  </script>
+
+	  <script id="map-tpl" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Map</h1>
+	      </header>
+	      <div class="content">
+	      This is the feed
+	      </div>
+	  </script>
+
+	  <script id="host-tpl" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Host</h1>
+	      </header>
+	      <div class="content">
+	      This is the feed
+	      </div>
+	  </script>
+
+	  <script id="settings-tpl" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">settings</h1>
+	      </header>
+	      <div class="content">
+	      This is the feed
+	      </div>
+	  </script>
+
+	  <script id="invite-tpl" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Invite</h1>
+	      </header>
+	      <div class="content">
+	      This is the feed
+	      </div>
+	  </script>
+
+	  
+
+	 <script id="employee-tpl" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Employee</h1>
+	      </header>
+	      <div class="content">
+	          <div class="card">
+	              <ul class="table-view">
+	                  <li class="table-view-cell media">
+	                      <img class="media-object pull-left emp-pic" src="assets/pics/{{pic}}">
+	                      <div class="media-body">
+	                          {{ firstName }} {{ lastName }}
+	                          <p>{{ title }}</p>
+	                      </div>
+	                  </li>
+	                  <li class="table-view-cell media">
+	                      <a href="tel:{{ officePhone }}" class="push-right">
+	                          <span class="media-object pull-left icon icon-call"></span>
+	                          <div class="media-body">
+	                              Call Office
+	                              <p>{{ officePhone }}</p>
+	                          </div>
+	                      </a>
+	                  </li>
+	                  <li class="table-view-cell media">
+	                      <a href="tel:{{ cellPhone }}" class="push-right">
+	                          <span class="media-object pull-left icon icon-call"></span>
+	                          <div class="media-body">
+	                              Call Cell
+	                              <p>{{ cellPhone }}</p>
+	                          </div>
+	                      </a>
+	                  </li>
+	                  <li class="table-view-cell media">
+	                      <a href="sms:{{ cellPhone }}" class="push-right">
+	                          <span class="media-object pull-left icon icon-sms"></span>
+	                          <div class="media-body">
+	                              SMS
+	                              <p>{{ cellPhone }}</p>
+	                          </div>
+	                      </a>
+	                  </li>
+	                  <li class="table-view-cell media">
+	                      <a href="mailto:{{ email }}" class="push-right">
+	                          <span class="media-object pull-left icon icon-mail"></span>
+	                          <div class="media-body">
+	                              Email
+	                              <p>{{ email }}</p>
+	                          </div>
+	                      </a>
+	                  </li>
+	                  <li class="table-view-cell media">
+		    <a href="#" class="push-right add-location-btn">
+		        <span class="media-object pull-left"></span>
+		        <div class="media-body">
+		            Add location
+		        </div>
+		    </a>
+		    </li>
+
+	              </ul>
+	          </div>
+	      </div>
+	  </script>
+
+	<script src="lib/jquery.js"></script>
+	<script src="lib/pageslider.js"></script>
+	<script src="lib/router.js"></script>
+	<script src="js/services/memory/EmployeeService.js"></script>
+	<script src="js/EmployeeListView.js"></script>
+	<script src="js/EmployeeView.js"></script>
+	<!-- LOGIN VIEWS -->
+	<script src="js/LoginView.js"></script>
+	<script src="js/RegisterView.js"></script>
+	<!-- NAV BAR VIEWS -->
+	<script src="js/HomeView.js"></script>
+	<script src="js/MyClassesView.js"></script>
+	<script src="js/SearchView.js"></script>
+	<script src="js/FilterView.js"></script>
+	<!-- MAIN MENU VIEWS -->
+	<script src="js/ClassesView.js"></script>
+	<script src="js/MapView.js"></script>
+	<script src="js/HostView.js"></script>
+	<script src="js/SettingsView.js"></script>
+	<script src="js/InviteView.js"></script>
+	
+
+	<script src="js/app.js"></script>
+	<script src="cordova.js"></script>
+	<script src="lib/fastclick.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+.navigation {
+  
+  /* Collapsed */
+  width: 0; 
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+}
+
+#main-navigation:target {
+width: 20%; 
+transition: width 0.3s ease;
+}
+
+#main-navigation{
+background-color: black;
+transition: width 0.3s ease;
+}
+
+.page-wrap {
+  width: 100%;
+  float: right;
+
+}
