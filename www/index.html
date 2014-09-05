@@ -17,7 +17,7 @@
 	<script id="employee-list-tpl" type="text/template">
 	    <ul class="table-view">
 	    	<a href="#home-tpl">Login</a>
-	    	<a href="#register-tpl">Register</a>
+	    	<a href="#main-menu-view">Register</a>
 	    </ul>
 	</script>
 
@@ -46,26 +46,28 @@
 	      </div>
 	  </script>
 
-	  <!-- NAV BAR VIEWS -->
-	
-	   <script id="home-tpl" type="text/template">
-	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
-	              <span class="icon icon-bars"></span>
-	            </a>
-	              	<!-- COLLAPSED MENU-->
-			<nav id="main-navigation" class="navigation">
-			<br />
-			<br />
-			   <a href="#home-tpl" id="menu-close">Close</a>
-			      <ul class="table-view">
+	<!-- MAIN MENU VIEW -->
+
+	  <script id="main-menu-view" type="text/template">
+	      <div class="content">
+			 <ul class="table-view">
 			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
 			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
 			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
 			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
 			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
 			</ul>
-			</nav>
+	    </nav>
+	  </script>
+
+	  <!-- NAV BAR VIEWS -->
+	
+	   <script id="home-tpl" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
+	              <span class="icon icon-bars"></span>
+	            </a>
+	              	
 	          <h1 class="title">Home Page</h1>
 	      </header>
 	      <div class="content">
@@ -77,22 +79,9 @@
 
 	    <script id="myclasses-view" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
 	          </a>
-	          <!-- COLLAPSED MENU-->
-			<nav id="main-navigation" class="navigation">
-			<br />
-			<br />
-			   <a href="#myclasses-view" id="menu-close">Close</a>
-			      <ul class="table-view">
-			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
-			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
-			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
-			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
-			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
-			</ul>
-			</nav>
 	          <h1 class="title">My Classes</h1>
 	      </header>
 	      <div class="content">
@@ -103,22 +92,9 @@
 
 	    <script id="search-view" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
 	          </a>
-	          <!-- COLLAPSED MENU-->
-			<nav id="main-navigation" class="navigation">
-			<br />
-			<br />
-			   <a href="#search-view" id="menu-close">Close</a>
-			      <ul class="table-view">
-			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
-			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
-			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
-			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
-			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
-			</ul>
-			</nav>
 	          <h1 class="title">Search</h1>
 	      </header>
 	      <div class="content">
@@ -129,22 +105,9 @@
 
 	    <script id="filter-view" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
 	          </a>
-	          <!-- COLLAPSED MENU-->
-			<nav id="main-navigation" class="navigation">
-			<br />
-			<br />
-			   <a href="#filter-view" id="menu-close">Close</a>
-			      <ul class="table-view">
-			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
-			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
-			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
-			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
-			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
-			</ul>
-			</nav>
 	          <h1 class="title">Filter</h1>
 	      </header>
 	      <div class="content">
@@ -178,22 +141,9 @@
 
 	  <script id="classes-tpl" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
 	          </a>
-	          <!-- COLLAPSED MENU-->
-			<nav id="main-navigation" class="navigation">
-			<br />
-			<br />
-			   <a href="#filter-view" id="menu-close">Close</a>
-			      <ul class="table-view">
-			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
-			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
-			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
-			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
-			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
-			</ul>
-			</nav>
 	          <h1 class="title">Classes</h1>
 	      </header>
 	      <div class="content">
@@ -204,22 +154,9 @@
 
 	  <script id="map-tpl" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
 	          </a>
-	          <!-- COLLAPSED MENU-->
-			<nav id="main-navigation" class="navigation">
-			<br />
-			<br />
-			   <a href="#filter-view" id="menu-close">Close</a>
-			      <ul class="table-view">
-			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
-			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
-			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
-			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
-			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
-			</ul>
-			</nav>
 	          <h1 class="title">Map</h1>
 	      </header>
 	      <div class="content">
@@ -231,22 +168,9 @@
 	  
 	<script id="host-tpl" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
 	          </a>
-	          <!-- COLLAPSED MENU-->
-			<nav id="main-navigation" class="navigation">
-			<br />
-			<br />
-			   <a href="#filter-view" id="menu-close">Close</a>
-			      <ul class="table-view">
-			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
-			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
-			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
-			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
-			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
-			</ul>
-			</nav>
 	          <h1 class="title">Host</h1>
 	      </header>
 	      <div class="content">
@@ -258,22 +182,9 @@
 
 	  <script id="settings-tpl" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
 	          </a>
-	          <!-- COLLAPSED MENU-->
-			<nav id="main-navigation" class="navigation">
-			<br />
-			<br />
-			   <a href="#filter-view" id="menu-close">Close</a>
-			      <ul class="table-view">
-			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
-			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
-			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
-			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
-			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
-			</ul>
-			</nav>
 	          <h1 class="title">Settings</h1>
 	      </header>
 	      <div class="content">
@@ -284,22 +195,9 @@
 
 	  <script id="invite-tpl" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
 	          </a>
-	          <!-- COLLAPSED MENU-->
-			<nav id="main-navigation-invite" class="navigation">
-			<br />
-			<br />
-			   <a href="#filter-view" id="menu-close">Close</a>
-			      <ul class="table-view">
-			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
-			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
-			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
-			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
-			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
-			</ul>
-			</nav>
 	          <h1 class="title">Invite</h1>
 	      </header>
 	      <div class="content">
@@ -307,12 +205,6 @@
 	      </div>
 	      
 	  </script>
-
-	  <!-- SCRIPT TO REPEAT THE MAIN MENU ITEMS -->
-	  <script>
-		var mainMenu = document.getElementById('main-navigation-invite');
-		mainMenu.html = '<div>Print this after the script tag</div>';
-	</script>
 
 	  <!-- HOST VIEWS -->
 
@@ -324,11 +216,10 @@
 	          <h1 class="title">Location Info</h1>
 	      </header>
 	      <div class="content">
-	      Enter the information
+	      <span id ="test" >Enter the information </span>
 	      </div>
 	  </script>
 
-	  
 
 	 <script id="employee-tpl" type="text/template">
 	      <header class="bar bar-nav">
@@ -412,6 +303,7 @@
 	<script src="js/SearchView.js"></script>
 	<script src="js/FilterView.js"></script>
 	<!-- MAIN MENU VIEWS -->
+	<script src="js/MainMenuView.js"></script>
 	<script src="js/ClassesView.js"></script>
 	<script src="js/MapView.js"></script>
 	<script src="js/HostView.js"></script>
