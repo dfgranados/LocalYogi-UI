@@ -5,7 +5,7 @@
     EmployeeListView.prototype.template = Handlebars.compile($("#employee-list-tpl").html());
     EmployeeView.prototype.template = Handlebars.compile($("#employee-tpl").html());
     /*LOGIN VIEWS*/
-    LoginView.prototype.template = Handlebars.compile($("#login-tpl").html());
+    LoginView.prototype.template = Handlebars.compile($("#login-view").html());
     RegisterView.prototype.template = Handlebars.compile($("#register-tpl").html());
     /*NAV BAR VIEWS*/
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
@@ -120,6 +120,4 @@
       }
     }, false);
 
-
 }());
-

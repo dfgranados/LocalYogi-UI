@@ -1,7 +1,9 @@
 ul {
     clear: both;
 }
-
+body{
+  /*margin-top: 20px;*/
+}
 
 /*OPENING MAIN MENU*/
 .navigation {
@@ -18,23 +20,30 @@ ul {
 
 }
 
-#main-navigation:target {
-width: 60%; 
-transition: width 0.3s ease;
-}
-
-#main-navigation{
-background-color: #eee;
-transition: width 0.3s ease;
-}
-
-
 /*NAVIGATION BAR*/
 
 .bar-tab
 {
 display:none;
 }
+
+.login-container
+{
+    height: 800px;
+    width: 100%;
+    background-color: rgb(167, 219, 216);
+}
+.login-view-content
+{
+
+}
+
+.login-logo img
+{
+  width: 250px;
+}
+
+
 
 /*MAIN MENU VIEW*/
 

@@ -13,6 +13,7 @@
     SearchView.prototype.template = Handlebars.compile($("#search-view").html());
     FilterView.prototype.template = Handlebars.compile($("#filter-view").html());
     /*MAIN MENU VIEWS*/
+   MainMenuView.prototype.template = Handlebars.compile($("#main-menu-view").html());
    ClassesView.prototype.template = Handlebars.compile($("#classes-tpl").html());
    MapView.prototype.template = Handlebars.compile($("#map-tpl").html());
    HostView.prototype.template = Handlebars.compile($("#host-tpl").html());
@@ -61,6 +62,10 @@
 
      /*MAIN MENU VIEWS*/
 
+      router.addRoute('main-menu-view', function() {
+          slider.slidePageFrom(new MainMenuView().render().$el, "left");
+    });
+
       router.addRoute('classes-tpl', function() {
           slider.slidePage(new ClassesView().render().$el, "fast");
     });
@@ -80,11 +85,6 @@
       router.addRoute('invite-tpl', function() {
           slider.slidePage(new InviteView().render().$el, "fast");
     });
-
-      /*SLIDING MENU*/
-      $( "#menu-close" ).click(function() {
-          $( "h1" ).slideToggle( "slow" );
-      });
 
       /*HOST VIEW*/
      router.addRoute('host-volunteer-view', function() {
@@ -120,6 +120,24 @@
       }
     }, false);
 
-    /* ---------------------------------- Local Variables ---------------------------------- */
+function closeMainMenu(){
+    var hash = window.location.hash;
+    if(hash === "#main-menu-view")
+    {
+      $( ".icon-close" ).on("click",function() {
+      /*window.location.href = lastPage;*/
+          
+            slider.slidePageFrom(new MyClassesView().render().$el, "right");
+      });
+    }
+    else
+    {
+      hash = hash.toString();
+      lastPage = hash;
+    }
+  }
+
+  setInterval(closeMainMenu, 500);
+
 
 }());

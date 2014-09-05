@@ -14,22 +14,20 @@
 <body>
 	
 	<script id="employee-list-tpl" type="text/template">
-	    <ul class="table-view">
-	    	<a href="#home-tpl">Login</a>
-	    	<a href="#main-menu-view">Register</a>
-	    </ul>
+	    <div class="login-container">
+		    <div class="login-logo">
+		    	<img src="img/LY_logo.png"/>
+		    </div>
+		    <div class="login-view-content">
+		    	<a href="#home-tpl">Login</a>
+		    	<a href="#main-menu-view">Register</a>
+		    </div>
+	    </div>
 	</script>
 
 	  <!-- LOGIN VIEWS -->
-	  <script id="login-tpl" type="text/template">
-	    <header class="bar bar-nav">
-	       <h1 class="title">LocalYogi Login</h1>
-	    </header>
-
-	    <div class="bar bar-standard bar-header-secondary">
-	        <input class='search-key' type="search"/>
-	    </div>
-	    <div class="content"></div>
+	  <script id="login-view" type="text/template">
+	   <div class="content"></div>
 	</script>
 
 	  <script id="register-tpl" type="text/template">

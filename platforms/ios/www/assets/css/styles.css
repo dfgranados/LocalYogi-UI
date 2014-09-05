@@ -1,9 +1,11 @@
 ul {
     clear: both;
 }
+body{
+  margin-top: 20px;
+}
 
-
-/*OPENING MENU*/
+/*OPENING MAIN MENU*/
 .navigation {
   
   /* Collapsed */
@@ -14,25 +16,22 @@ ul {
   top: 0;
   left: 0;
   height: 100%;
+  z-index: 0;
 
 }
-
-#main-navigation:target {
-width: 40%; 
-transition: width 0.3s ease;
-}
-
-#main-navigation{
-background-color: #eee;
-transition: width 0.3s ease;
-}
-
 
 /*NAVIGATION BAR*/
 
-.navbar{
-    position:absolute;
-    bottom:0px;
+.bar-tab
+{
+display:none;
+}
+
+/*MAIN MENU VIEW*/
+
+#main-menu-content
+{
+  display:block;
 }
 
 .content {

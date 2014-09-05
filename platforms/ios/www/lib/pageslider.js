@@ -63,6 +63,6 @@ function PageSlider(container) {
         currentPage.attr("class", "page transition " + (from === "left" ? "right" : "left"));
         currentPage = page;
         }
-    }
+    };
 
 }
