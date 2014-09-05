@@ -35,3 +35,8 @@
     -webkit-transition-duration: .25s;
     transition-duration: .25s;
 }
+
+.page.transitiona {
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+}

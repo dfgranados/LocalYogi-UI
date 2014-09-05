@@ -6,6 +6,7 @@
 	 <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
 	<link href="assets/css/styles.css" rel="stylesheet">
 	<link href="assets/css/pageslider.css" rel="stylesheet">
+	<link href="index.css" rel="stylesheet">
 	<script src="lib/handlebars.js"></script>
 </head>
 <body>
@@ -14,17 +15,6 @@
 	    <ul class="table-view">
 	    	<a href="#home-tpl">Login</a>
 	    	<a href="#register-tpl">Register</a>
-	        {{#each this}}
-	        <li class="table-view-cell media">
-	          <a href="#employees/{{ id }}">
-	              <img class="media-object pull-left" src="assets/pics/{{pic}}">
-	              <div class="media-body">
-	                  {{firstName}} {{lastName}}
-	                  <p>{{title}}</p>
-	              </div>
-	          </a>
-	        </li>
-	        {{/each}}
 	    </ul>
 	</script>
 
@@ -33,6 +23,7 @@
 	    <header class="bar bar-nav">
 	        <h1 class="title">LocalYogi Login</h1>
 	    </header>
+
 	    <div class="bar bar-standard bar-header-secondary">
 	        <input class='search-key' type="search"/>
 	    </div>
@@ -53,125 +44,275 @@
 	  </script>
 
 	  <!-- NAV BAR VIEWS -->
-
+	
 	   <script id="home-tpl" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#">
-	              <span class="icon icon-left-nav"></span>
-	          </a>
+	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	              <span class="icon icon-bars"></span>
+	            </a>
+	              	<!-- COLLAPSED MENU-->
+			<nav id="main-navigation" class="navigation">
+			<br />
+			<br />
+			   <a href="#home-tpl" id="menu-close">Close</a>
+			      <ul class="table-view">
+			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
+			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
+			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
+			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
+			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
+			</ul>
+			</nav>
 	          <h1 class="title">Home Page</h1>
 	      </header>
 	      <div class="content">
-	      <a href="#home-tpl">Home</a>
-	      <a href="#myclasses-view">My Classes</a>
-	      <a href="#search-view">Search</a>
-	      <a href="#filter-view">Filter</a>
-	      
-
-
-	      <a href="#classes-tpl">Classes</a>
-	      <a href="#map-tpl">Map</a>
-	      <a href="#host-tpl">Host</a>
-	      <a href="#settings-tpl">Settings</a>
-	      <a href="#invite-tpl">Invite</a>
+	     this is the feed
 	      </div>
+	      <nav class="bar bar-tab">
+		  <a class="tab-item active" href="#home-tpl">
+		    <span class="icon icon-home"></span>
+		    <span class="tab-label">Home</span>
+		  </a>
+		  <a class="tab-item" href="#myclasses-view">
+		    <span class="icon icon-star-filled"></span>
+		    <span class="tab-label">My Classes</span>
+		  </a>
+		  <a class="tab-item" href="#filter-view">
+		    <span class="icon icon-download"></span>
+		    <span class="tab-label">Filter</span>
+		</a>
+		  <a class="tab-item" href="#search-view">
+		    <span class="icon icon-search"></span>
+		    <span class="tab-label">Search</span>
+		  </a>
+	    </nav>
 	  </script>
 
 	    <script id="myclasses-view" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#home-tpl">
-	              <span class="icon icon-left-nav"></span>
+	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	              <span class="icon icon-bars"></span>
 	          </a>
+	          <!-- COLLAPSED MENU-->
+			<nav id="main-navigation" class="navigation">
+			<br />
+			<br />
+			   <a href="#myclasses-view" id="menu-close">Close</a>
+			      <ul class="table-view">
+			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
+			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
+			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
+			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
+			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
+			</ul>
+			</nav>
 	          <h1 class="title">My Classes</h1>
 	      </header>
 	      <div class="content">
 	      This is the feed
 	      </div>
+	      <nav class="bar bar-tab">
+		  <a class="tab-item active" href="#home-tpl">
+		    <span class="icon icon-home"></span>
+		    <span class="tab-label">Home</span>
+		  </a>
+		  <a class="tab-item" href="#myclasses-view">
+		    <span class="icon icon-star-filled"></span>
+		    <span class="tab-label">My Classes</span>
+		  </a>
+		  <a class="tab-item" href="#filter-view">
+		    <span class="icon icon-download"></span>
+		    <span class="tab-label">Filter</span>
+		</a>
+		  <a class="tab-item" href="#search-view">
+		    <span class="icon icon-search"></span>
+		    <span class="tab-label">Search</span>
+		  </a>
+	    </nav>
 	  </script>
 
 	    <script id="search-view" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#home-tpl">
-	              <span class="icon icon-left-nav"></span>
+	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	              <span class="icon icon-bars"></span>
 	          </a>
+	          <!-- COLLAPSED MENU-->
+			<nav id="main-navigation" class="navigation">
+			<br />
+			<br />
+			   <a href="#search-view" id="menu-close">Close</a>
+			      <ul class="table-view">
+			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
+			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
+			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
+			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
+			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
+			</ul>
+			</nav>
 	          <h1 class="title">Search</h1>
 	      </header>
 	      <div class="content">
 	      This is the feed
 	      </div>
+	      <nav class="bar bar-tab">
+		  <a class="tab-item active" href="#home-tpl">
+		    <span class="icon icon-home"></span>
+		    <span class="tab-label">Home</span>
+		  </a>
+		  <a class="tab-item" href="#myclasses-view">
+		    <span class="icon icon-star-filled"></span>
+		    <span class="tab-label">My Classes</span>
+		  </a>
+		  <a class="tab-item" href="#filter-view">
+		    <span class="icon icon-download"></span>
+		    <span class="tab-label">Filter</span>
+		</a>
+		  <a class="tab-item" href="#search-view">
+		    <span class="icon icon-search"></span>
+		    <span class="tab-label">Search</span>
+		  </a>
+	    </nav>
 	  </script>
 
 	    <script id="filter-view" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#home-tpl">
-	              <span class="icon icon-left-nav"></span>
+	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	              <span class="icon icon-bars"></span>
 	          </a>
+	          <!-- COLLAPSED MENU-->
+			<nav id="main-navigation" class="navigation">
+			<br />
+			<br />
+			   <a href="#filter-view" id="menu-close">Close</a>
+			      <ul class="table-view">
+			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
+			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
+			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
+			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
+			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
+			</ul>
+			</nav>
 	          <h1 class="title">Filter</h1>
 	      </header>
 	      <div class="content">
 	      This is the feed
 	      </div>
+	      <nav class="bar bar-tab">
+		  <a class="tab-item active" href="#home-tpl">
+		    <span class="icon icon-home"></span>
+		    <span class="tab-label">Home</span>
+		  </a>
+		  <a class="tab-item" href="#myclasses-view">
+		    <span class="icon icon-star-filled"></span>
+		    <span class="tab-label">My Classes</span>
+		  </a>
+		  <a class="tab-item" href="#filter-view">
+		    <span class="icon icon-download"></span>
+		    <span class="tab-label">Filter</span>
+		</a>
+		  <a class="tab-item" href="#search-view">
+		    <span class="icon icon-search"></span>
+		    <span class="tab-label">Search</span>
+		  </a>
+	    </nav>
 	  </script>
+	</div>
+
+	<!-- NAVBAR ITEMS -->
+
+	<nav class="bar bar-tab">
+		  <a class="tab-item active" href="#home-tpl">
+		    <span class="icon icon-home"></span>
+		    <span class="tab-label">Home</span>
+		  </a>
+		  <a class="tab-item" href="#myclasses-view">
+		    <span class="icon icon-star-filled"></span>
+		    <span class="tab-label">My Classes</span>
+		  </a>
+		  <a class="tab-item" href="#filter-view">
+		    <span class="icon icon-download"></span>
+		    <span class="tab-label">Filter</span>
+		</a>
+		  <a class="tab-item" href="#search-view">
+		    <span class="icon icon-search"></span>
+		    <span class="tab-label">Search</span>
+		  </a>
+	</nav>
 
 	 <!-- MAIN MENU VIEWS -->
 
 	  <script id="classes-tpl" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#home-tpl">
-	              <span class="icon icon-left-nav"></span>
+	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	              <span class="icon icon-bars"></span>
 	          </a>
 	          <h1 class="title">Classes</h1>
 	      </header>
 	      <div class="content">
-	      This is the feed
+	      classes
 	      </div>
 	  </script>
 
 	  <script id="map-tpl" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#">
-	              <span class="icon icon-left-nav"></span>
+	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	              <span class="icon icon-bars"></span>
 	          </a>
 	          <h1 class="title">Map</h1>
 	      </header>
 	      <div class="content">
-	      This is the feed
+	      map
 	      </div>
 	  </script>
 
 	  <script id="host-tpl" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#">
-	              <span class="icon icon-left-nav"></span>
+	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	              <span class="icon icon-bars"></span>
 	          </a>
 	          <h1 class="title">Host</h1>
 	      </header>
 	      <div class="content">
-	      This is the feed
+	      <br />
+	     <a href="#host-volunteer-view"> Volunteer a location link </a>
 	      </div>
 	  </script>
 
 	  <script id="settings-tpl" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#">
-	              <span class="icon icon-left-nav"></span>
+	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	              <span class="icon icon-bars"></span>
 	          </a>
 	          <h1 class="title">settings</h1>
 	      </header>
 	      <div class="content">
-	      This is the feed
+	     settings
 	      </div>
 	  </script>
 
 	  <script id="invite-tpl" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#">
-	              <span class="icon icon-left-nav"></span>
+	          <a class="btn btn-link btn-nav pull-left" href="#main-navigation">
+	              <span class="icon icon-bars"></span>
 	          </a>
 	          <h1 class="title">Invite</h1>
 	      </header>
 	      <div class="content">
-	      This is the feed
+	      invite
+	      </div>
+	  </script>
+
+	  <!-- HOST VIEWS -->
+
+	    <script id="host-volunteer-view" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#host-tpl">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Location Info</h1>
+	      </header>
+	      <div class="content">
+	      Enter the information
 	      </div>
 	  </script>
 
@@ -264,7 +405,8 @@
 	<script src="js/HostView.js"></script>
 	<script src="js/SettingsView.js"></script>
 	<script src="js/InviteView.js"></script>
-	
+	<!-- HOST VIEWS -->
+	<script src="js/HostVolunteerView.js"></script>
 
 	<script src="js/app.js"></script>
 	<script src="cordova.js"></script>

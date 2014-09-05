@@ -18,6 +18,8 @@
    HostView.prototype.template = Handlebars.compile($("#host-tpl").html());
    SettingsView.prototype.template = Handlebars.compile($("#settings-tpl").html());
    InviteView.prototype.template = Handlebars.compile($("#invite-tpl").html());
+   /*HOST VIEWS*/
+   HostVolunteerView.prototype.template = Handlebars.compile($("#host-volunteer-view").html());
 
 
     var service = new EmployeeService();
@@ -42,42 +44,53 @@
      /*NAV BAR VIEWS*/
 
       router.addRoute('home-tpl', function() {
-          slider.slidePage(new HomeView().render().$el);
+          slider.slidePage(new HomeView().render().$el, "fast");
     });
 
        router.addRoute('myclasses-view', function() {
-          slider.slidePage(new MyClassesView().render().$el);
+         slider.slidePage(new MyClassesView().render().$el, "fast");
     });
 
         router.addRoute('search-view', function() {
-          slider.slidePage(new SearchView().render().$el);
+         slider.slidePage(new SearchView().render().$el, "fast");
     });
 
          router.addRoute('filter-view', function() {
-          slider.slidePage(new FilterView().render().$el);
+         slider.slidePage(new FilterView().render().$el, "fast");
     });
 
      /*MAIN MENU VIEWS*/
 
       router.addRoute('classes-tpl', function() {
-          slider.slidePage(new ClassesView().render().$el);
+          slider.slidePage(new ClassesView().render().$el, "fast");
     });
 
       router.addRoute('map-tpl', function() {
-          slider.slidePage(new MapView().render().$el);
+          slider.slidePage(new MapView().render().$el, "fast");
     });
 
       router.addRoute('host-tpl', function() {
-          slider.slidePage(new HostView().render().$el);
+          slider.slidePage(new HostView().render().$el, "fast");
     });
 
       router.addRoute('settings-tpl', function() {
-          slider.slidePage(new SettingsView().render().$el);
+          slider.slidePage(new SettingsView().render().$el, "fast");
     });
 
       router.addRoute('invite-tpl', function() {
-          slider.slidePage(new InviteView().render().$el);
+          slider.slidePage(new InviteView().render().$el, "fast");
     });
+
+      /*SLIDING MENU*/
+      $( "#menu-close" ).click(function() {
+          $( "h1" ).slideToggle( "slow" );
+      });
+
+      /*HOST VIEW*/
+     router.addRoute('host-volunteer-view', function() {
+          slider.slidePage(new HostVolunteerView().render().$el);
+    });
+
 
   router.addRoute('employees/:id', function(id) {
       service.findById(parseInt(id)).done(function(employee) {
