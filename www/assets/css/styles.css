@@ -3,7 +3,7 @@ ul {
 }
 
 
-/*OPENING MENU*/
+/*OPENING MAIN MENU*/
 .navigation {
   
   /* Collapsed */
@@ -31,9 +31,9 @@ transition: width 0.3s ease;
 
 /*NAVIGATION BAR*/
 
-.navbar{
-    position:absolute;
-    bottom:0px;
+.bar-tab
+{
+  display:none;
 }
 
 .content {
