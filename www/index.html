@@ -6,7 +6,6 @@
 	 <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
 	<link href="assets/css/styles.css" rel="stylesheet">
 	<link href="assets/css/pageslider.css" rel="stylesheet">
-	<link href="index.css" rel="stylesheet">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="lib/handlebars.js"></script>
@@ -50,6 +49,8 @@
 
 	  <script id="main-menu-view" type="text/template">
 	      <div class="content">
+	      		<span id="main-menu-content">
+	      		<div class="icon icon-close"></div>
 			 <ul class="table-view">
 			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
 			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
@@ -57,6 +58,7 @@
 			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
 			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
 			</ul>
+			</span>
 	    </nav>
 	  </script>
 
@@ -216,7 +218,7 @@
 	          <h1 class="title">Location Info</h1>
 	      </header>
 	      <div class="content">
-	      <span id ="test" >Enter the information </span>
+	     Enter the information
 	      </div>
 	  </script>
 
@@ -313,7 +315,6 @@
 	<script src="js/HostVolunteerView.js"></script>
 
 	<script src="js/app.js"></script>
-	<script src="cordova.js"></script>
 	<script src="lib/fastclick.js"></script>
 
 </body>

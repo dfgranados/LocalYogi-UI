@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	/*show bottom navigation for pages in the "show" array, remove it for others*/
 
 	function navBarVisibility() {
@@ -37,4 +38,25 @@ $(document).ready(function(){
 	/*$( ".login-btn" ).on("click",function() {
 		$('.bar-tab').css("display", "block");
 	});*/
+
+	/*function to close main menu and go back to last page*/
+	var lastPage;
+	function closeMainMenu(){
+		var hash = window.location.hash;
+		if(hash === "#main-menu-view")
+		{
+			$( ".icon-close" ).on("click",function() {
+			window.location.href = lastPage;
+			});
+		}
+		else
+		{
+			hash = hash.toString();
+			lastPage = hash;
+		}
+	}
+
+	setInterval(closeMainMenu, 1000);
+
+
 });

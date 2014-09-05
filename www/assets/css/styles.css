@@ -36,6 +36,13 @@ transition: width 0.3s ease;
 display:none;
 }
 
+/*MAIN MENU VIEW*/
+
+#main-menu-content
+{
+  display:block;
+}
+
 .content {
     position: absolute;
 }
