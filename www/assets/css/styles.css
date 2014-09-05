@@ -19,7 +19,7 @@ ul {
 }
 
 #main-navigation:target {
-width: 40%; 
+width: 60%; 
 transition: width 0.3s ease;
 }
 
@@ -33,7 +33,7 @@ transition: width 0.3s ease;
 
 .bar-tab
 {
-  display:none;
+display:none;
 }
 
 .content {
