@@ -284,6 +284,8 @@
 	      </div>
 	  </script>
 
+	   <!-- MAP VIEWS -->
+
 	  <script id="map-view" type="text/template">
 	      <header class="bar bar-nav">
 	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
@@ -297,7 +299,7 @@
 	      
 	  </script>
 
-	  
+	<!-- HOST VIEWS -->	  
 	<script id="host-view" type="text/template">
 	      <header class="bar bar-nav">
 	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
@@ -308,11 +310,104 @@
 	      <div class="content">
 	       <a href="#host-volunteer-view"> Volunteer a location link </a>
 	      </div>
-	      
+	  </script>
+	  <script id="host-volunteer-view" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#host-view">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Location Info</h1>
+	      </header>
+	      <div class="content">
+	     Enter the information
+	      </div>
 	  </script>
 
-
+	<!-- Settings Views -->
 	  <script id="settings-view" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
+	              <span class="icon icon-bars"></span>
+	          </a>
+	          <h1 class="title">Settings</h1>
+	          <a class="btn btn-link btn-nav pull-right" href="#">
+	              log out
+	            </a>
+	      </header>
+	      <div class="content">
+		<ul class="table-view">
+		<li class="table-view-cell table-view-divider">General</li>
+		  <li class="table-view-cell">
+		    <a class="navigate-right" href="#privacy-view">
+		     Privacy Settings
+		    </a>
+		  </li>
+		  <li class="table-view-cell">
+		    <a class="navigate-right" href="#account-verify-view">
+		      Verify Account
+		    </a>
+		  </li>
+		  <li class="table-view-cell table-view-divider">Account</li>
+		  <li class="table-view-cell">
+		    <a class="navigate-right" href="#profile-view">
+		     Profile
+		    </a>
+		  </li>
+		  <li class="table-view-cell">
+		    <a class="navigate-right" href="#setting-view">
+		      Social Media
+		    </a>
+		  </li>
+		  <li class="table-view-cell table-view-divider">App Information</li>
+		  <li class="table-view-cell">
+		    <a class="navigate-right" href="#settings-view">
+		      About
+		    </a>
+		  </li>
+		  <li class="table-view-cell">
+		    <a class="navigate-right" href="#settings-view">
+		      Terms & Conditions
+		    </a>
+		  </li>
+		</ul>
+	      </div>
+	  </script>
+	  <script id="privacy-view" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#settings-view">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Settings</h1>
+	      </header>
+	      <div class="content">
+	      Privacy Settings
+	      </div>
+	  </script>
+	  <script id="account-verify-view" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#settings-view">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Settings</h1>
+	      </header>
+	      <div class="content">
+	       Verify teacher or business account
+	      </div>
+	  </script>
+
+	  <!-- PROFILE VIEWS - UNDER SETTINGS -->
+	<script id="profile-view" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#settings-view">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Settings</h1>
+	      </header>
+	      <div class="content">
+	       <a href="#"><span class="logout-btn"> Logout </span></a>
+	      </div>
+	  </script>
+	  <script id="profile-class-view" type="text/template">
 	      <header class="bar bar-nav">
 	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
@@ -322,9 +417,9 @@
 	      <div class="content">
 	       <a href="#"><span class="logout-btn"> Logout </span></a>
 	      </div>
-	     
 	  </script>
 
+	<!-- INVITE VIEWS -->
 	  <script id="invite-view" type="text/template">
 	      <header class="bar bar-nav">
 	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
@@ -336,20 +431,6 @@
 	       Send invite
 	      </div>
 	      
-	  </script>
-
-	  <!-- HOST VIEWS -->
-
-	    <script id="host-volunteer-view" type="text/template">
-	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#host-view">
-	              <span class="icon icon-left-nav"></span>
-	          </a>
-	          <h1 class="title">Location Info</h1>
-	      </header>
-	      <div class="content">
-	     Enter the information
-	      </div>
 	  </script>
 
 

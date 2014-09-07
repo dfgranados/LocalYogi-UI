@@ -29,7 +29,14 @@
     /*HOST VIEWS*/
      HostView.prototype.template = Handlebars.compile($("#host-view").html());
      HostVolunteerView.prototype.template = Handlebars.compile($("#host-volunteer-view").html());
-   SettingsView.prototype.template = Handlebars.compile($("#settings-view").html());
+     /*SETTINGS VIEWS*/
+     SettingsView.prototype.template = Handlebars.compile($("#settings-view").html());
+     PrivacyView.prototype.template = Handlebars.compile($("#privacy-view").html());
+     AccountVerifyView.prototype.template = Handlebars.compile($("#account-verify-view").html());
+   /*PROFILE VIEWS*/
+      ProfileView.prototype.template = Handlebars.compile($("#profile-view").html());
+      ProfileClassView.prototype.template = Handlebars.compile($("#profile-class-view").html());
+   /*INVITE VIEWS*/
    InviteView.prototype.template = Handlebars.compile($("#invite-view").html());
    /*HOST VIEWS*/
 
@@ -115,22 +122,42 @@
       router.addRoute('map-view', function() {
           slider.slidePage(new MapView().render().$el, "fast");
     });
+     
+      /*HOST VIEWS*/
+     router.addRoute('host-volunteer-view', function() {
+          slider.slidePage(new HostVolunteerView().render().$el);
+    });
 
       router.addRoute('host-view', function() {
           slider.slidePage(new HostView().render().$el, "fast");
     });
 
+      /*SETTINGS VIEWS*/
       router.addRoute('settings-view', function() {
           slider.slidePage(new SettingsView().render().$el, "fast");
     });
 
-      router.addRoute('invite-view', function() {
-          slider.slidePage(new InviteView().render().$el, "fast");
+      router.addRoute('privacy-view', function() {
+          slider.slidePage(new PrivacyView().render().$el, "fast");
     });
 
-      /*HOST VIEW*/
-     router.addRoute('host-volunteer-view', function() {
-          slider.slidePage(new HostVolunteerView().render().$el);
+      router.addRoute('account-verify-view', function() {
+          slider.slidePage(new AccountVerifyView().render().$el, "fast");
+    });
+
+      /*PROFILE VIEWS*/
+      router.addRoute('profile-view', function() {
+          slider.slidePage(new ProfileView().render().$el, "fast");
+    });
+
+      router.addRoute('profile-class-view', function() {
+          slider.slidePage(new ProfileClassView().render().$el, "fast");
+    });
+
+
+      /*INVITE VIEWS*/
+      router.addRoute('invite-view', function() {
+          slider.slidePage(new InviteView().render().$el, "fast");
     });
 
 
