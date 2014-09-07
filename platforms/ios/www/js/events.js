@@ -37,10 +37,6 @@ $(document).ready(function(){
 		return false;
 	}
 
-	/*$( ".login-btn" ).on("click",function() {
-		$('.bar-tab').css("display", "block");
-	});*/
-
 	/*function to close main menu and go back to last page*/
 	MyClassesView.prototype.template = Handlebars.compile($("#myclasses-view").html());
 	var lastPage;
@@ -60,6 +56,12 @@ $(document).ready(function(){
 	}
 
 	setInterval(closeMainMenu, 500);
+
+	/*change the color of the navbar menu items to the currently active page*/
+	$(".tab-item").on("click", function(){
+		$(".tab-item").removeClass("active");
+		$(this).addClass("active");
+	});
 
 
 });

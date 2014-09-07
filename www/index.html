@@ -15,7 +15,7 @@
 	<div class="status-bar">
 	</div>
 	
-	<script id="employee-list-tpl" type="text/template">
+	<script id="employee-list-view" type="text/template">
 	<div class="status-bar"></div>
 	    <div class="login-container">
 		    <div class="login-logo">
@@ -28,8 +28,8 @@
 	                                 <div class="login-form"><p> password: </p><input id="pw" type="text"></input> </div>
 	                                </form>
 	                           <div class="login-section">
-			     <div class="ly-btn"><a href="#home-tpl">login</a></div>
-			     <div class="ly-btn"><a href="#main-menu-view">register</a></div>
+			     <div class="ly-btn"><a href="#home-view">login</a></div>
+			     <div class="ly-btn"><a href="#register-view">register</a></div>
 			</div>
 			<div class="login-section">
 			     <h4 align="center"> or login with </h4>
@@ -45,7 +45,7 @@
 	   <div class="content"></div>
 	</script>
 
-	  <script id="register-tpl" type="text/template">
+	  <script id="register-view" type="text/template">
 	      <header class="bar bar-nav">
 	          <a class="btn btn-link btn-nav pull-left" href="#">
 	              <span class="icon icon-left-nav"></span>
@@ -54,7 +54,73 @@
 	      </header>
 	      <div class="content">
 	      This is the feed
-	          
+	          <a class="reg-next" href="#register-view-a">Next</a>
+	      </div>
+	  </script>
+
+	  <script id="register-view-a" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#register-view">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Welcome to local yogi</h1>
+	      </header>
+	      <div class="content">
+	     Enter the information
+	     <a class="reg-next" href="#register-view-b">Next</a>
+	      </div>
+	  </script>
+
+	  <script id="register-view-b" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#register-view-a">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Please enter your info</h1>
+	      </header>
+	      <div class="content">
+	     Enter the information
+	    <a class="reg-next" href="#register-view-c1">Next1</a>
+	    <a class="reg-next" href="#register-view-c2">Next2</a>
+	      </div>
+	  </script>
+
+	  <script id="register-view-c1" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#register-view-b">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">Profile pic - non-social</h1>
+	      </header>
+	      <div class="content">
+	     Enter the information
+	     <a class="reg-next" href="#register-view-d">Next</a>
+	      </div>
+	  </script>
+
+	  <script id="register-view-c2" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#register-view-b">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">profile pic - social</h1>
+	      </header>
+	      <div class="content">
+	     Enter the information
+	      <a class="reg-next" href="#register-view-d">Next</a>
+	      </div>
+	  </script>
+
+	  <script id="register-view-d" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#register-view-c1">
+	              <span class="icon icon-left-nav"></span>
+	          </a>
+	          <h1 class="title">thanks! invite</h1>
+	      </header>
+	      <div class="content">
+	     Enter the information
+	     <a class="reg-next" href="#home-view">Next</a>
 	      </div>
 	  </script>
 
@@ -66,31 +132,49 @@
 	      		<span id="main-menu-content">
 	      		<div class="icon icon-close"></div>
 			 <ul class="table-view">
-			      <li class="table-view-cell"> <a href="#classes-tpl">Classes</a></li>
-			      <li class="table-view-cell"><a href="#map-tpl">Map</a></li>
-			      <li class="table-view-cell"><a href="#host-tpl">Host</a></li>
-			      <li class="table-view-cell"><a href="#settings-tpl">Settings</a></li>
-			      <li class="table-view-cell"><a href="#invite-tpl">Invite</a></li>
+			      <li class="table-view-cell"> <a href="#classes-view">Classes</a></li>
+			      <li class="table-view-cell"><a href="#map-view">Map</a></li>
+			      <li class="table-view-cell"><a href="#host-view">Host</a></li>
+			      <li class="table-view-cell"><a href="#settings-view">Settings</a></li>
+			      <li class="table-view-cell"><a href="#invite-view">Invite</a></li>
 			</ul>
 			</span>
 	    </nav>
 	  </script>
 
 	  <!-- NAV BAR VIEWS -->
+
+	  <!-- HOME VIEWS -->
 	
-	   <script id="home-tpl" type="text/template">
+	   <script id="home-view" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
+	         	<a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
-	            </a>
-	              	
+	            </a>	
 	          <h1 class="title">Home Page</h1>
+	          <a class="btn btn-link btn-nav pull-right" href="#add-post">
+	              <span class="icon icon-plus"></span>
+	            </a>
 	      </header>
 	      <div class="content">
 	     this is the feed
 	      </div>
-	       
 	    </nav>
+	  </script>
+
+	  <script id="add-post" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#home-view">
+	              cancel
+	          </a>
+	          <h1 class="title">add post</h1>
+	           <a class="btn btn-link btn-nav pull-right" href="#add-post">
+	          post
+	            </a>
+	      </header>
+	      <div class="content">
+	     post options
+	      </div>
 	  </script>
 
 	    <script id="myclasses-view" type="text/template">
@@ -103,7 +187,6 @@
 	      <div class="content">
 	      This is the feed
 	      </div>
-	      
 	  </script>
 
 	    <script id="search-view" type="text/template">
@@ -129,13 +212,12 @@
 	      <div class="content">
 	      This is the feed
 	      </div>
-	     
 	  </script>
 	</div>
 
 	<!-- NAVBAR ITEMS -->
 	<nav class="bar bar-tab">
-		  <a class="tab-item active" href="#home-tpl">
+		  <a class="tab-item" href="#home-view">
 		    <span class="icon icon-home"></span>
 		    <span class="tab-label">Home</span>
 		  </a>
@@ -155,20 +237,54 @@
 
 	 <!-- MAIN MENU VIEWS -->
 
-	  <script id="classes-tpl" type="text/template">
+	 <!-- CLASSES VIEWS -->
+
+	  <script id="classes-view" type="text/template">
 	      <header class="bar bar-nav">
 	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
 	          </a>
 	          <h1 class="title">Classes</h1>
+	           <a class="btn btn-link btn-nav pull-right" href="#add-class">
+	        	<span class="icon icon-plus"></span>
+	            </a>
 	      </header>
 	      <div class="content">
 	      This is the feed
 	      </div>
-	     
 	  </script>
 
-	  <script id="map-tpl" type="text/template">
+	 <script id="add-class" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#classes-view">
+	              cancel
+	          </a>
+	          <h1 class="title">add class</h1>
+	           <a class="btn btn-link btn-nav pull-right" href="#add-post">
+	          save
+	            </a>
+	      </header>
+	      <div class="content">
+	     class options
+	      </div>
+	  </script>
+
+	   <script id="add-post" type="text/template">
+	      <header class="bar bar-nav">
+	          <a class="btn btn-link btn-nav pull-left" href="#home-view">
+	              cancel
+	          </a>
+	          <h1 class="title">add post</h1>
+	           <a class="btn btn-link btn-nav pull-right" href="#add-post">
+	          post
+	            </a>
+	      </header>
+	      <div class="content">
+	     post options
+	      </div>
+	  </script>
+
+	  <script id="map-view" type="text/template">
 	      <header class="bar bar-nav">
 	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
@@ -182,7 +298,7 @@
 	  </script>
 
 	  
-	<script id="host-tpl" type="text/template">
+	<script id="host-view" type="text/template">
 	      <header class="bar bar-nav">
 	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
@@ -196,7 +312,7 @@
 	  </script>
 
 
-	  <script id="settings-tpl" type="text/template">
+	  <script id="settings-view" type="text/template">
 	      <header class="bar bar-nav">
 	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
@@ -209,7 +325,7 @@
 	     
 	  </script>
 
-	  <script id="invite-tpl" type="text/template">
+	  <script id="invite-view" type="text/template">
 	      <header class="bar bar-nav">
 	          <a class="btn btn-link btn-nav pull-left" href="#main-menu-view">
 	              <span class="icon icon-bars"></span>
@@ -226,7 +342,7 @@
 
 	    <script id="host-volunteer-view" type="text/template">
 	      <header class="bar bar-nav">
-	          <a class="btn btn-link btn-nav pull-left" href="#host-tpl">
+	          <a class="btn btn-link btn-nav pull-left" href="#host-view">
 	              <span class="icon icon-left-nav"></span>
 	          </a>
 	          <h1 class="title">Location Info</h1>
@@ -237,7 +353,7 @@
 	  </script>
 
 
-	 <script id="employee-tpl" type="text/template">
+	 <script id="employee-view" type="text/template">
 	      <header class="bar bar-nav">
 	          <a class="btn btn-link btn-nav pull-left" href="#">
 	              <span class="icon icon-left-nav"></span>
@@ -322,7 +438,9 @@
 	<script src="js/MainMenuView.js"></script>
 	<script src="js/ClassesView.js"></script>
 	<script src="js/MapView.js"></script>
-	<script src="js/HostView.js"></script>
+		<!-- HOST VIEWS -->
+		<script src="js/HostView.js"></script>
+		<script src="js/HostVolunteerView.js"></script>
 	<script src="js/SettingsView.js"></script>
 	<script src="js/InviteView.js"></script>
 	<!-- HOST VIEWS -->

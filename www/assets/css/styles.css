@@ -37,10 +37,8 @@ a
   color:rgb(248,145,86);
 }
 
-/*OPENING MAIN MENU*/
+/*MAIN MENU*/
 .navigation {
-  
-  /* Collapsed */
     width: 0; 
     background-color: black;
     overflow: hidden;
@@ -102,10 +100,6 @@ a
   float:right;
 }
 
-
-
-
-
 /*MAIN MENU VIEW*/
 
 #main-menu-content
@@ -116,6 +110,7 @@ a
 .content {
     position: absolute;
 }
+
 
 .bar-header-secondary>input {
     margin-top: 6px;

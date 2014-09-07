@@ -5,38 +5,51 @@ body{
   margin-top: 20px;
 }
 
-/*OPENING MAIN MENU*/
+/*UNIVERSAL STYLES*/
+.ly-btn
+{
+  width:120px;
+  line-height:30px;
+  border: 1px solid rgb(248,145,86);
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  margin:0 12px;
+}
+
+p, h4
+{
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight:100;
+    font-size: 18px;
+}
+
+p
+{
+  display:inline-block;
+}
+
+a
+{
+  color:rgb(248,145,86);
+}
+
+/*MAIN MENU*/
 .navigation {
-  
-  /* Collapsed */
-  width: 0; 
-  background-color: black;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  z-index: 0;
-
+    width: 0; 
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 0;
 }
 
-/*NAVIGATION BAR*/
-
-.bar-tab
-{
-display:none;
-
-}
-
-.bar-nav
-{
-
-}
-
-.content{
-clear:both;
-}
-
+/*LOGIN PAGE*/
 .login-container
 {
     display:inline-block;
@@ -51,12 +64,7 @@ clear:both;
   display:block;
   margin: 0 auto;
 }
-.login-btns
-{
-    width:300px;
-    margin:0 auto;
-}
-.login-logo img
+.login-logo img, .login-btns, .form-container
 {
   width: 300px;
   margin: 50px auto;
@@ -67,20 +75,35 @@ clear:both;
  color:rgb(248,145,86);
  font-size: 18px;
 }
-.ly-btn
+
+.login-section
 {
-  width:120px;
-  line-height:30px;
-  border: 1px solid rgb(248,145,86);
-  border-radius: 5px;
-  background-color: #fff;
-  text-align: center;
-  vertical-align: middle;
-  display: inline-block;
-  margin:0 12px;
+  margin: 30px 0px;
 }
 
+.login-section img
+{
+  height: 50px;
+  margin-left:75px;
+  margin-top: 30px;
+  display:inline-block;
+}
 
+.login-form input
+{
+  width: 180px;
+  height:20px;
+  border:0px;
+  border-bottom: 1px solid white;
+  background-color: rgb(167, 219, 216);
+  display:block;
+  float:right;
+}
+
+#home-tpl:target  .bar-tab>.tab-item>.icon-home
+{
+  color:red;
+}
 
 /*MAIN MENU VIEW*/
 
@@ -92,6 +115,7 @@ clear:both;
 .content {
     position: absolute;
 }
+
 
 .bar-header-secondary>input {
     margin-top: 6px;

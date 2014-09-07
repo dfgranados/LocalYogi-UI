@@ -2,6 +2,7 @@ $(document).ready(function(){
 	var slider = new PageSlider($('body'));
 	router.start();
 
+
 	/*show bottom navigation for pages in the "show" array, remove it for others*/
 
 	function navBarVisibility() {
@@ -9,7 +10,7 @@ $(document).ready(function(){
 		hash = hash.toString();
 
 		var showNavBar = [];
-		var hideNavBar = ["", "#host-volunteer-view", "#main-menu-view"];
+		var hideNavBar = ["", "#host-volunteer-view", "#main-menu-view", "#register-view", "#register-view-a", "#register-view-b", "#register-view-c1", "#register-view-c2", "#register-view-d"];
 
 		
 		if(contains(hideNavBar, hash))
@@ -37,10 +38,6 @@ $(document).ready(function(){
 		return false;
 	}
 
-	/*$( ".login-btn" ).on("click",function() {
-		$('.bar-tab').css("display", "block");
-	});*/
-
 	/*function to close main menu and go back to last page*/
 	MyClassesView.prototype.template = Handlebars.compile($("#myclasses-view").html());
 	var lastPage;
@@ -60,6 +57,15 @@ $(document).ready(function(){
 	}
 
 	setInterval(closeMainMenu, 500);
+
+	/*add active styling to home first time after login*/
+	$(".icon-home").parent().addClass("active");
+
+	/*change the color of the navbar menu items to the currently active page*/
+	$(".tab-item").on("click", function(){
+		$(".tab-item").removeClass("active");
+		$(this).addClass("active");
+	});
 
 
 });
