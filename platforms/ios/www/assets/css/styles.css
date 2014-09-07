@@ -25,7 +25,62 @@ body{
 .bar-tab
 {
 display:none;
+
 }
+
+.bar-nav
+{
+
+}
+
+.content{
+clear:both;
+}
+
+.login-container
+{
+    display:inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(167, 219, 216);
+}
+
+.login-logo, .login-btns
+{
+  width: 100%;
+  display:block;
+  margin: 0 auto;
+}
+.login-btns
+{
+    width:300px;
+    margin:0 auto;
+}
+.login-logo img
+{
+  width: 300px;
+  margin: 50px auto;
+  display:block;
+}
+.login-btns a
+{
+ color:rgb(248,145,86);
+ font-size: 18px;
+}
+.ly-btn
+{
+  width:120px;
+  line-height:30px;
+  border: 1px solid rgb(248,145,86);
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  margin:0 12px;
+}
+
+
 
 /*MAIN MENU VIEW*/
 

@@ -5,7 +5,7 @@
     EmployeeListView.prototype.template = Handlebars.compile($("#employee-list-tpl").html());
     EmployeeView.prototype.template = Handlebars.compile($("#employee-tpl").html());
     /*LOGIN VIEWS*/
-    LoginView.prototype.template = Handlebars.compile($("#login-tpl").html());
+    LoginView.prototype.template = Handlebars.compile($("#login-view").html());
     RegisterView.prototype.template = Handlebars.compile($("#register-tpl").html());
     /*NAV BAR VIEWS*/
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
@@ -119,25 +119,5 @@
           };
       }
     }, false);
-
-function closeMainMenu(){
-    var hash = window.location.hash;
-    if(hash === "#main-menu-view")
-    {
-      $( ".icon-close" ).on("click",function() {
-      /*window.location.href = lastPage;*/
-          
-            slider.slidePageFrom(new MyClassesView().render().$el, "right");
-      });
-    }
-    else
-    {
-      hash = hash.toString();
-      lastPage = hash;
-    }
-  }
-
-  setInterval(closeMainMenu, 500);
-
 
 }());
