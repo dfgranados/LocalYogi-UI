@@ -492,8 +492,8 @@ input[type="button"] {
   height: 44px;
   padding-right: 10px;
   padding-left: 10px;
-  background-color: white;
-  border-bottom: 1px solid #ddd;
+  background-color: rgb(167, 219, 216);
+  border-bottom: 0px solid #ddd;
 
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -528,14 +528,15 @@ input[type="button"] {
 
 .title {
   position: absolute;
+  font-family: 'Lato', sans-serif;
   display: block;
   width: 100%;
   padding: 0;
   margin: 0 -10px;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 200;
   line-height: 44px;
-  color: #000;
+  color: #fff;
   text-align: center;
   white-space: nowrap;
 }
@@ -551,14 +552,14 @@ input[type="button"] {
   height: 50px;
   padding: 0;
   table-layout: fixed;
-  border-top: 1px solid #ddd;
+  border-top: 0px solid #ddd;
   border-bottom: 0;
 }
 .bar-tab .tab-item {
   display: table-cell;
   width: 1%;
   height: 50px;
-  color: #929292;
+  color: #fff;
   text-align: center;
   vertical-align: middle;
 }
@@ -597,7 +598,7 @@ input[type="button"] {
   padding: 0;
   font-size: 16px;
   line-height: 44px;
-  color: #428bca;
+  color: #fff;
   border: 0;
 }
 .bar .btn-link:active, .bar .btn-link.active {

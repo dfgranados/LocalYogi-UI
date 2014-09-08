@@ -49,6 +49,46 @@ a
     z-index: 0;
 }
 
+.main-menu-content{
+    display:inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(167, 219, 216);
+}
+
+.main-menu-content a{
+   
+    font-family: 'Lato', sans-serif;
+    font-weight:200;
+    font-size: 42px;
+    color: #fff;
+}
+
+.main-menu-item
+{
+  clear:both;
+  width:100%;
+  display:block;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.menu-line
+{
+  width: 18%;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid white;
+}
+
+.icon-close
+{
+  color:white;
+ font-size: 40px;
+ float:right;
+ margin:15px 15px 25px 0px;
+}
+
 /*LOGIN PAGE*/
 .login-container
 {
